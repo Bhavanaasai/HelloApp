@@ -1,13 +1,29 @@
 public class Main {
     public static void main(String[] args) {
+ UC5
+        String result;
+
   UC4
         String names;
+ main
 
-        if (args.length > 0) {
-            names = String.join(", ", args);
+        if (args.length == 0) {
+            result = "World";
         } else {
-            names = "World";
+            StringBuilder sb = new StringBuilder();
+
+            for (String name : args) {
+                if (sb.length() > 0) {
+                    sb.append(", ");
+                }
+                sb.append(name);
+            }
+
+            result = sb.toString();
         }
+
+ UC5
+        System.out.println("Hello, " + result + "!");
 
         System.out.println("Hello, " + names + "!");
       
@@ -16,6 +32,7 @@ public class Main {
         System.out.println("Hello, " + name + "!");
 
         System.out.println("Hello App UC1");
+ main
  main
  main
     }
